@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viss Fashions</title>
+
+    <link rel="stylesheet" href="./assets/css/bootstrap.css">
+    <link rel="stylesheet" href="./assets/css/index.css">
+    <link href="https://fonts.cdnfonts.com/css/poppins" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/4534c556c8.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- Navbar section -->
+    <div class="container">
+        <nav class="d-flex justify-content-between align-items-center py-3">
+            <h2>Viss Fashions</h2>
+
+            <ul class="d-flex list-unstyled gap-5 m-0 navbar_links">
+                <li>About</li>
+                <li>Accessories</li>
+                <li>Clothing</li>
+                <li>Services</li>
+            </ul>
+
+            <div class="d-flex gap-4 align-items-center">
+                <button id="modal-btn" class="border-0 bg-transparent  d-inline-block text-dark">Log in</button>
+                <button id="modal_btn-2" class="border-0 text-decoration-none d-inline-block viss_btn ">Sign up</button>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Header section -->
+    <header class="pt-5">
+        <div class="container viss_nav">
+            <div class="row align-items-center">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 viss_trends pe-lg-5 ">
+                    <h4 class="mb-3 fw-">Trendiest Fashion ever</h4>
+                    <h2 class="mb-5">When you are in doubt,
+                        wear a Viss Fashions
+                        Denim</h2>
+
+                    <a href="" class="text-decoration-none d-inline-block viss_btn ">Buy now</a>
+                </div>
+
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="viss_img-box d-flex justify-content-center">
+                        <img src="./assets/images/photo-1600804889194-e6fbf08ddb39-removebg-preview 1.png"
+                            alt="model-image" class="img-fluid viss_img w-75">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="viss_modal" id="modal">
+        <div class="viss_modal-content d-flex mx-auto flex-wrap mt-5">
+            <i class="fa fa-window-close  end-0 modal_close"  aria-hidden="true"></i>
+            <div class="bg-white modal-text rounded-start text-center pt-4">
+                <div class="mb-4 pb-2">
+                    <img src="./assets/images/Logo.png" alt="login-logo" class="img-fluid">
+                </div>
+                <div class="mb-5">
+                    <h4>Log in or Sign up</h4>
+                    <p>Use your email or other serivce to continue with us </p>
+                </div>
+                <div class="viss_login-links">
+                    <a href="#" class="d-block text-decoration-none text-dark border border-dark w-75 p-3 rounded-pill mx-auto align-middle mb-4"><i class="text-primary pe-3 fa-brands fa-facebook"></i> Continue with Facebook</a>
+                    <a href="#" class="d-block text-decoration-none text-dark border border-dark w-75 p-3 rounded-pill mx-auto align-middle mb-4"><i class="pe-3 fa-brands fa-google"></i> Continue with Google</a>
+                    <a href="#" class="d-block text-decoration-none text-dark border border-dark w-75 p-3 rounded-pill mx-auto align-middle mb-4"><i class="pe-3 fa-brands fa-apple"></i> Continue with Apple</a>
+                    <a href="#" class="d-block text-decoration-none text-dark border border-dark w-75 p-3 rounded-pill mx-auto align-middle mb-4"><i class="text-primary pe-3 fa-brands fa-twitter"></i> Continue with Twitter</a>
+                    <a href="#" class="d-block text-decoration-none text-dark border border-dark w-75 p-3 rounded-pill mx-auto align-middle mb-4"><i class="pe-3 fa-solid fa-envelope"></i> Continue with Email</a>
+                    <a href="#" class="d-block text-decoration-none text-dark border border-dark w-75 p-3 rounded-pill mx-auto align-middle mb-4"><i class="pe-3 fa-solid fa-mobile"></i> Continue with Phone</a>
+                </div>
+            </div>
+
+            <div class="modal-img ">
+                <div class="">
+                    <img src="./assets/images/mae-mu-9z-veIxii6k-unsplash 1.png" alt="login-logo"
+                        class="img-fluid h-100 rounded-end">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        let vissModal = document.getElementById("modal");
+
+        let vissBtn = document.getElementById("modal-btn");
+
+        let vissBtn2 = document.getElementById("modal_btn-2");
+
+        let vissClose = document.getElementsByClassName("modal_close");
+
+        vissBtn.onclick = () => {
+            modal.style.display = "block";
+        }
+
+        vissBtn2.onclick = () => {
+            modal.style.display = "block";
+        }
+
+        vissClose.onclick = () => {
+            modal.style.display = "none";
+        }
+
+        window.onclick = () => {
+            if(event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>
